@@ -14,13 +14,13 @@
 
     <!-- END NAVBAR -->
 
-    <div class="jumbotron paral paralsec">
+    <div class="jumbotron paral paralsec" style="text-align: center;">
         <h1>Discover a place where you love to live</h1>
         <p>For testing purpose only</p>
-        <div style="text-align: center;">
-            <form class="form-inline my-2 my-lg-0 ">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <div style="display: inline-block">
+            <form class="form-inline my-2 my-lg-0 form-horizontal">
+                <input class="form-control mr-sm-2 bigInputField" type="search" placeholder="Search" aria-label="Search" style="width: 500px;">
+                <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
             </form>
         </div>
     </div>
