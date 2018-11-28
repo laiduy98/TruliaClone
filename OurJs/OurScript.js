@@ -1,16 +1,16 @@
-$('#carouselExample').on('slide.bs.carousel', function (e) {
+    $('#ddddd').on('slide.bs.carousel', function (e) {
 
-
+  
     var $e = $(e.relatedTarget);
     var idx = $e.index();
     var itemsPerSlide = 4;
     var totalItems = $('.carousel-item').length;
-
-    if (idx >= totalItems - (itemsPerSlide - 1)) {
+    
+    if (idx >= totalItems-(itemsPerSlide-1)) {
         var it = itemsPerSlide - (totalItems - idx);
-        for (var i = 0; i < it; i++) {
+        for (var i=0; i<it; i++) {
             // append slides to end
-            if (e.direction == "left") {
+            if (e.direction=="left") {
                 $('.carousel-item').eq(i).appendTo('.carousel-inner');
             }
             else {
@@ -21,22 +21,22 @@ $('#carouselExample').on('slide.bs.carousel', function (e) {
 });
 
 
-$('#carouselExample').carousel({
-    interval: 2000
-});
+  $('#ddddd').carousel({ 
+                interval: 2000
+        });
 
 
 $(document).ready(function () {
     /* show lightbox when clicking a thumbnail */
-    $('a.thumb').click(function (event) {
+    $('a.thumb').click(function(event){
         event.preventDefault();
         var content = $('.modal-body');
         content.empty();
-        var title = $(this).attr("title");
-        $('.modal-title').html(title);
-        content.html($(this).html());
-        $(".modal-profile").modal({ show: true });
-    });
+          var title = $(this).attr("title");
+          $('.modal-title').html(title);        
+          content.html($(this).html());
+          $(".modal-profile").modal({show:true});
+      });
     // An dep trai
     $("#loginForm").submit(function(event) {
         event.preventDefault();
