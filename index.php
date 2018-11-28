@@ -9,7 +9,7 @@
 
 
     <?php
-        require 'navbar.php';
+        require 'navbarJumbotron.php';
     ?>
 
     <!-- END NAVBAR -->
@@ -18,6 +18,8 @@
         require 'OurHtml/index.html';
     ?>
 
+
+ 
 
 <?php
     require 'footer.php';

@@ -15,8 +15,7 @@
     <!-- END NAVBAR -->
 
     <section class="main-container">
-        <div class="main-wrapper">
-            <h2>Signup</h2>
+        <div class="messageWrapper">
 
             <?php
                 if(isset($_GET['error'])) {
@@ -44,15 +43,43 @@
 
                 }
             ?>
-
-            <form class="signup-form" action="includes/signup.inc.php" method="POST">
-                <input type="text" name="mail" placeholder="E-mail" value="<?php echo isset($_GET['mail']) ? $_GET['mail'] : '' ?>">
-                <input type="text" name="username" placeholder="Username" value="<?php echo isset($_GET['username']) ? $_GET['username'] : '' ?>">
-                <input type="password" name="pwd" placeholder="Password">
-                <input type="password" name="pwd-repeat" placeholder="Repeat Password">
-                <button type="submit" name = "signup-submit">Sign up</button>
-            </form>
         </div>
+
+            <div class="signup-form">
+                <form action="includes/signup.inc.php" method="POST">
+                    <h2>Sign up</h2>
+                    <hr>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="fullName" placeholder="Full name" value="<?php echo isset($_GET['fullName']) ? $_GET['fullName'] : '' ?>" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="mail" placeholder="Email" value="<?php echo isset($_GET['mail']) ? $_GET['mail'] : '' ?>">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="username" placeholder="Username" value="<?php echo isset($_GET['username']) ? $_GET['username'] : '' ?>">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="pwd" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="pwd-repeat" placeholder="Repeat Password">
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" class="form-control" name="phone" placeholder="Phone number">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="city" placeholder="Your city" value="<?php echo isset($_GET['city']) ? $_GET['city'] : '' ?>">
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-inline"><input type="checkbox" required> I accept the <a href="#">Term of Use</a> and <a href="#">Privacy Policy</a></label>
+                    </div>
+                    <div class="form-group">
+                            <button type="submit" name="signup-submit" class="btn btn-primary btn-lg">Sign up</button>
+                    </div>
+                    
+                </form>
+            </div>
+        
 
     </section>
 

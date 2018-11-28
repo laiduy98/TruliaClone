@@ -24,7 +24,7 @@
         }
         else {
             //Prepare sql statement
-            $sqlText = "SELECT user_id, user_pwd FROM users WHERE user_uid=?";
+            $sqlText = "SELECT user_id, user_uid, user_pwd FROM users WHERE user_uid=?";
             $sqlStatement = mysqli_stmt_init($conn);
             if(!(mysqli_stmt_prepare($sqlStatement, $sqlText))) {
                 echo '<span class="login_error">Server error, please try again</span>';
@@ -63,7 +63,7 @@
     }
     else {
         echo '<span class="login_error">button is not set</span>';
-        exit();
+        ;
     }
 ?>
 
